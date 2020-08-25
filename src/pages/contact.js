@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Layout from '../components/layout'
 
 const ContactPage = () => {
   return (
-    <div>
-      <Header></Header>
+    <Layout>
       <h1>Contact me</h1>
       <a href="http://twitter.com/">Reach me on Twitter</a>
-      <Footer></Footer>
-    </div>
+    </Layout>
   )
 }
 
