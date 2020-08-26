@@ -3,7 +3,9 @@ title: 'The Great Gatsby Bootcamp'
 date: '2020-08-24'
 ---
 
-I just launched a new bootcamp!
+I just started a new bootcamp! Let's learn together!
+
+![Gatsby and Netlify logo](/gnpic.jpg)
 
 ## Topics Covered
 
