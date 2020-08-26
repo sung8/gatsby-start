@@ -3,6 +3,11 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 
+/*
+1. Fetch the slug for posts
+2. Use slug to generate a link to the post page
+3. Test work
+*/
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -15,6 +20,9 @@ const BlogPage = () => {
             }
             html
             excerpt
+            fields {
+              slug
+            }
           }
         }
       }
@@ -31,8 +39,10 @@ const BlogPage = () => {
         {data.allMarkdownRemark.edges.map(edge => {
           return (
             <li>
-              <h2>{edge.node.frontmatter.title}</h2>
-              <p>{edge.node.frontmatter.date}</p>
+              <Link to={`/blog/${edge.node.fields.slug}`}>
+                <h2>{edge.node.frontmatter.title}</h2>
+                <p>{edge.node.frontmatter.date}</p>
+              </Link>
             </li>
           )
         })}

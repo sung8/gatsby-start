@@ -1,0 +1,22 @@
+Goal 1 - generate a slug for each post
+
+gatsby.md --> gatsby --> /gatsby or /blog/gatsby
+
+need slug to set up correct endpoint for where the post will be accessible 
+
+
+Goal 2 - generate the blog post page template (react component)
+
+Goal 3 - combine 1 and 2, generate a new page for each post
+
+------
+gatsby-node.js file 
+- gives access to gatsby node api
+- list of apis on gatsby website
+- onCreateNode 
+    - called when a new node is created. 
+    - allows us to to attach some new data to the individual node, we will attach the slug so we have access to the slug in entire project
+    - node is nothing more than data structure for storing data 
+        - we grabbed data from the node in graphql playground
+
+COMPLETED
